@@ -3,12 +3,14 @@ Class1
 
 .. currentmodule:: dummy_api
 
-.. automodule:: u8timeseries.timeseries
+.. automodule:: dummy_api.class1
 
 .. autoclass:: Class1
 
 
    .. rubric:: Methods Summary
+   
+   .. autosummary::
 
       ~class1.my_name_is
       ~class1.guess_my_name
@@ -16,6 +18,6 @@ Class1
 
    .. rubric:: Methods Descriptions
 
-      .. automethod:: my_name_is
-      .. automethod:: guess_my_name
+   .. automethod:: my_name_is
+   .. automethod:: guess_my_name
 
