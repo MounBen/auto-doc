@@ -18,10 +18,12 @@ class Class1:
 
     def my_name_is(self):
         """
-        Completes the sentence 'My name is ' with the name of the class
+        Completes the sentence 'My name is ' with the `name` of the class
 
-        This very complicated method relies on a Class1 object to print a point.
-        :return: A string containing a point.
+        This very complicated method relies on a Class1 object to make a sentence.
+        
+        
+        :return: A string which is a sentence.
         """
 
         return 'My name is ' + self.name
