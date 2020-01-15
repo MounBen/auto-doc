@@ -3,6 +3,7 @@ Class1
 
 .. currentmodule:: dummy_api
 
+.. automodule:: u8timeseries.timeseries
 
 .. autoclass:: Class1
 
