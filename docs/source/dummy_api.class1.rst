@@ -12,8 +12,8 @@ Class1
    
    .. autosummary::
 
-      ~class1.my_name_is
-      ~class1.guess_my_name
+      ~Class1.my_name_is
+      ~Class1.guess_my_name
 
 
    .. rubric:: Methods Descriptions
