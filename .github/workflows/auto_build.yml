@@ -22,4 +22,4 @@ jobs:
         pip install sphinx
     - name: Run Sphinx
       run: |
-        python make html   
+        make html  
