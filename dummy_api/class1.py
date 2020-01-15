@@ -1,5 +1,5 @@
 """
-This is the first class defined in this API
+This is the first class defined in this API!
 """
 
 
