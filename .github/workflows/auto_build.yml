@@ -22,5 +22,5 @@ jobs:
         pip install sphinx
     - name: Run Sphinx
       run: |
-        cd auto-doc/docs
+        cd docs
         make html  
