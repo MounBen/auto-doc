@@ -28,8 +28,8 @@ jobs:
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
-        REPO: git@github.com:MounBen/auto-doc.git
+        REPO: self
         BRANCH: master
         FOLDER: docs
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}        
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         
