@@ -29,20 +29,17 @@ jobs:
       run: |
         cd docs
         make github 
+    
+    - name: Create .nojekyll
+      run: |
+       touch docs/build/html/.nojekyll
       
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: docs/build/html
+        FOLDER: docs/build/html/{.,}*
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Deploy .nojekyll
-      uses: s0/git-publish-subdir-action@master
-      env:
-        REPO: self
-        BRANCH: gh-pages
-        FOLDER: docs/build/html/.nojekyll
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
         
