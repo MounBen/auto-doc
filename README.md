@@ -8,6 +8,7 @@ Done steps: - can build in the vm
             - extract from vm and push to /docs
             - set up gh-pages repo
             - push to gh-pages instead of /docs
-            
-Next steps: - set up website
+            - set up website
             - change some stuff to see how fast website updates
+
+Main Issue: - .nojekyll is not included in the push hence it disappears with prevents github pages to do it s magic.
