@@ -33,4 +33,12 @@ jobs:
         BRANCH: gh-pages
         FOLDER: docs/build/html
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create .nojekyll
+      run: |
+        git checkout gh-pages
+        touch .nojekyll
+        git -add .nojekyll
+        git commit -m"Add .nojekyll"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
