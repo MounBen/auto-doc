@@ -1,4 +1,4 @@
-name: Python package
+name: Documentation Builder and Update gh-pages branch
 
 on: [push]
 
