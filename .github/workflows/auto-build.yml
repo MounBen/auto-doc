@@ -29,12 +29,7 @@ jobs:
       run: |
         cd docs
         make github 
-        
-    - name: Create .nojekyll
-      run: |
-        cd /home/runner/work/auto-doc/auto-doc/docs/build/html
-        touch .nojekyll  
-        
+      
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
@@ -42,3 +37,17 @@ jobs:
         BRANCH: gh-pages
         FOLDER: docs/build/html
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Create .nojekyll
+      run: |
+        git config --global user.email ${{ secrets.EMAIL_U8 }}
+        git config --global user.name ${{ secrets.USER_NAME }}
+        
+        git checkout gh-pages
+        touch .nojekyll
+        git add .nojekyll
+        git commit -m"Add .nojekyll"
+        git push origin
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
