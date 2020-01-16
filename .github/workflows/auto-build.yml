@@ -37,8 +37,9 @@ jobs:
       run: |
         git checkout gh-pages
         touch .nojekyll
-        git -add .nojekyll
+        git add .nojekyll
         git commit -m"Add .nojekyll"
+        git push origin
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
