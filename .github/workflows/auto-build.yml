@@ -1,4 +1,4 @@
-name: Documentation Builder and Update gh-pages branch
+name: Build documentation and update gh-pages branch
 
 on: [push]
 
