@@ -1,1 +1,0 @@
-All html pages conveniently in the same folder
