@@ -31,6 +31,6 @@ jobs:
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: build/hmtl
+        FOLDER: docs/build/hmtl
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
