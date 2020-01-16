@@ -25,3 +25,11 @@ jobs:
       run: |
         cd docs
         make html  
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@master
+      env:
+        REPO: git@github.com:MounBen/auto-doc.git
+        BRANCH: master
+        FOLDER: docs
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}        
+        
