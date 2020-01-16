@@ -12,20 +12,29 @@ jobs:
         python-version: [3.7]
 
     steps:
+      
     - uses: actions/checkout@v1
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+        
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install sphinx
         pip install sphinx_rtd_theme
+        
     - name: Build documentation
       run: |
         cd docs
-        make github   
+        make github 
+        
+    - name: Create .nojekyll
+      run: |
+        cd docs/build/html
+        touch .nojekyll  
+        
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
@@ -33,13 +42,3 @@ jobs:
         BRANCH: gh-pages
         FOLDER: docs/build/html
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Create .nojekyll
-      run: |
-        git checkout gh-pages
-        touch .nojekyll
-        git add .nojekyll
-        git commit -m"Add .nojekyll"
-        git push origin
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
