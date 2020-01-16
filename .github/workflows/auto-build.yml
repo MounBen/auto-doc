@@ -25,11 +25,7 @@ jobs:
     - name: Build documentation
       run: |
         cd docs
-        make github  
-    - name: Add .nojekyll
-      run: |
-        cd docs/build/html
-        touch .nojekyll 
+        make github   
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
