@@ -4,15 +4,15 @@ This is the first class defined in this API!
 
 
 class Class1:
+    """
+    Description of the class Class1.
 
+    This class does nothing in particular, it only contains a name given at initialization.
+
+    :param name: A string, the name to be given to the Class1 instance.
+    """
+    
     def __init__(self, name: str):
-        """
-        Description of the class Class1.
-
-        Ths class does nothing in particular, it only contains a name given at initialization.
-
-        :param name: A string, the name to be given to the Class1 instance.
-        """
 
         self.name = name
 
