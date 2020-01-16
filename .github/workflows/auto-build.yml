@@ -38,16 +38,11 @@ jobs:
         FOLDER: docs/build/html
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-    - name: Create .nojekyll
-      run: |
-        git config --global user.email ${{ secrets.EMAIL_U8 }}
-        git config --global user.name ${{ secrets.USER_NAME }}
-        
-        git checkout gh-pages
-        touch .nojekyll
-        git add .nojekyll
-        git commit -m"Add .nojekyll"
-        git push origin
+    - name: Deploy .nojekyll
+      uses: s0/git-publish-subdir-action@master
       env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: docs/build/html/.nojekyll
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
