@@ -35,7 +35,7 @@ jobs:
        touch docs/build/html/.nojekyll
       
     - name: Deploy
-      uses: s0/git-publish-subdir-action@master
+      uses: MounBen/git-publish-subdir-action@master
       env:
         REPO: self
         BRANCH: gh-pages
