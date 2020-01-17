@@ -3,7 +3,7 @@ name: Build documentation and update gh-pages branch
 on: [push]
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
     strategy:
@@ -33,7 +33,7 @@ jobs:
     - name: Create .nojekyll
       run: |
        touch docs/build/html/.nojekyll
-      
+       
     - name: Deploy
       uses: MounBen/git-publish-subdir-action@master
       env:
