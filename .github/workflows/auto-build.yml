@@ -37,7 +37,7 @@ jobs:
     - name: Deploy
       uses: MounBen/git-publish-subdir-action@master
       env:
-        REPO: self
+        REPO: git@github.com:MounBen/auto-doc.git
         BRANCH: gh-pages
         FOLDER: docs/build/html
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
