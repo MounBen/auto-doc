@@ -6,6 +6,8 @@
 Welcome to dummy_api's documentation!
 =====================================
 
+This is the index!
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
